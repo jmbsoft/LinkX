@@ -1,0 +1,134 @@
+body {
+  font-family: Tahoma;
+  font-size: 9pt;
+  margin-top: 15px;
+}
+
+input, select, textarea, button {
+  font-family: Tahoma;
+  font-size: 9pt;
+  margin: 0px;
+}
+
+a.category {
+  color: #0066CC;
+}
+
+a.link {
+  color: #1979B5;
+}
+
+form {
+  padding: 0px;
+  margin: 0px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.header {
+  font-size: 16pt;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hilite {
+  background-color: yellow;
+}
+
+.searchbar {
+  background-color: #ececec;
+}
+
+.infobar {
+  background-color: #ececec;
+  font-weight: bold;
+  border-top: 1px solid #afafaf;
+  border-bottom: 1px solid #afafaf;
+  padding: 3px 0px 3px 5px;
+}
+
+.url {
+  color: green;
+  font-size: 8pt;
+}
+
+.small {
+  font-size: 8pt;
+}
+
+a.tab {
+  font-size: 8pt;
+  font-weight: bold;
+  color: #000;
+  background-color: #ececec;
+  border: 1px solid #afafaf;
+  border-bottom-width: 0px;
+  padding: 2px 1em 2px 1em;
+  position: relative;
+  text-decoration: none;
+  top: -1px;
+  z-index: 100;
+}
+
+a.tab:hover {
+  color: #555;
+}
+
+.border-left {
+  border-left: 1px solid #afafaf;
+}
+
+.border-right {
+  border-right: 1px solid #afafaf;
+}
+
+.border-top {
+  border-top: 1px solid #afafaf;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #afafaf;
+}
+
+.plain {
+  text-decoration: none;
+}
+
+.grey {
+  color: #666;
+}
+
+.error {
+  font-weight: bold;
+  color: #d52727;
+  padding: 4px;
+  padding-left: 10px;
+  background-color: #FEE7E8;
+}
+
+.notice {
+  font-weight: bold;
+  color: #0097FF;
+  padding: 4px;
+  padding-left: 10px;
+  background-color: #EFF8E0;
+}
+
+.jmbfoot {
+  font-size: 7pt;
+  font-family: Tahoma;
+  text-align: center;
+}
+
+.jmblink {
+  font-size: 7pt;
+  font-family: Tahoma;
+  color: #1979B5;
+}
+

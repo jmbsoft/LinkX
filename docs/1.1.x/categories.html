@@ -1,0 +1,269 @@
+<html>
+<head>
+    <title>LinkX Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div align="center">
+<span class="large">Categories</span>
+</div>
+
+<br />
+
+<div class="centered">
+<div class="main-content">
+
+<b class="heading">Introduction</b>
+
+<br />
+<br />
+
+In LinkX categories are one of the basic building blocks.  Every link that is added must be assigned to one or more categories, and you are
+allowed to have an unlimited number of categories.  LinkX also allows you to have sub-categories to an unlimited depth.  This document will give
+you an overview of how to add, maintain, and remove categories.
+
+<br />
+<br />
+
+<b class="heading">Adding a New Category<a name="add"></a></b>
+
+<br />
+<br />
+
+To add a new category access the Settings &gt; Manage Categories function from the control panel menu.  This will display your currently configured categories.  Near the top of the page in the header
+bar that reads "Manage Categories" click on the <img src="../images/add.png" border="0" alt=""> icon.  This will display a popup window where you will be able to enter the data
+for the new category that you want to add.  Each of the form fields are described below.
+
+<ul>
+<table cellspacing="1" cellpadding="4" class="fields">
+<tr>
+<td valign="top" align="right">
+<b>Name(s)</b>
+</td>
+<td>
+Enter the name(s) of the new category you want to add.  To add multiple categories at once, enter each category name on a separate line.
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>URL Name(s)</b>
+</td>
+<td>
+Enter the name(s) of the category as it should appear in the URL to this category in the link directory.  This will only be used when you have
+the mod_rewrite option enabled.  To add multiple URL names at once, enter each URL name on a separate line.  When entering multiple values, these
+will be matched up with the Name(s) field on a line-by-line basis (i.e. the first line of this field matches up with the first line of the Name(s) field).
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="note">
+To select the parent, related, and crosslink categories you will need to use the Category Selector interface.  Please see the 
+<a href="category-selector.html">documentation on the Category Selector Interface</a> for details on how it is used.
+</div>
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Parent</b>
+</td>
+<td>
+Select the parent category for the new category you are adding.  Click the <img src="../images/add-small.png"> icon to select the parent category or the
+<img src="../images/remove-small.png"> icon to clear the current selected parent category.
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Related</b>
+</td>
+<td>
+Select the related categories for the new category you are adding.  Click the <img src="../images/add-small.png"> icon to select related categories or the
+<img src="../images/remove-small.png"> icon to clear the current selected related categories.
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Crosslink</b>
+</td>
+<td>
+If you want the new category to be a crosslink category, select the crosslink category here.  Click the <img src="../images/add-small.png"> icon to select the crosslink category or the
+<img src="../images/remove-small.png"> icon to clear the current selected crosslink category.  Additional information is available in the <a href="#crosslink">Crosslink Categories</a> section of this document.
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Template</b>
+</td>
+<td>
+If you want to use a custom template for this category, enter the template filename in this field.  The template filename must have a .tpl file extension and you will need to create this
+file in the templates directory with 666 permissions. Additional information is available in the <a href="#custom">Custom Templates</a> section of this document.
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Description</b>
+</td>
+<td>
+Enter the description of the category; this value can be displayed on the category page in the link directory
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Meta Description</b>
+</td>
+<td>
+Enter a description of the category for use in the meta description HTML tag of the category page
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Meta Keywords</b>
+</td>
+<td>
+Enter some keywords for the category to use in the meta keywords HTML tag of the category page
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Status</b>
+</td>
+<td>
+Select the status for the new category.  Additional information is available in the <a href="#status">Category Status</a> section of this document.
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Make this category hidden</b>
+</td>
+<td>
+Check this box to make the category hidden.  Hidden categories will not appear in the link directory and users will not be able to submit links to these categories.
+</td>
+</tr>
+</table>
+</ul>
+
+Once you have filled in all of the fields as you want them, press the Add Category button.  This will add the new category to the database and it will be immediately
+available for link submissions.
+
+<br />
+<br />
+
+<b class="heading">Crosslink Categories<a name="crosslink"></a></b>
+
+<br />
+<br />
+
+When you assign the Crosslink field on the category creation/editing interface, this will make the category a crosslink category.  Crosslink categories are simply pointers
+to real categories, and cannot contain any links or sub-categories.  When a surfer clicks on a crosslink category in your link directory, it will take them to the real category
+that the crosslink category points to.
+
+<br />
+<br />
+
+<b class="heading">Custom Templates<a name="custom"></a></b>
+
+<br />
+<br />
+
+LinkX allows you to have custom templates for any or all of your categories.  In general this is not needed, since the LinkX template system is capable of handling all your
+categories from a single template, however if you want to have a totally different design for some of your category pages you can use this feature.
+
+<br />
+<br />
+
+<div class="note">
+Using the custom template feature will require an additional MySQL database query which will add a small amount of additional load to your server.  If server load is a concern, you
+should avoid using custom templates for your categories.
+</div>
+
+<br />
+
+To use the custom template feature, you will need to enter the template filename when you add/edit a category.  The template filename must have a .tpl file extension and should not
+contain any spaces or other special characters (use only english letters, numbers, -, _, and .).  The template filename should not be the same as any of the default templates included
+with LinkX, but can be the same as another custom template.
+
+<br />
+<br />
+
+When you create/edit a category with a custom template, LinkX will ask you to create the template file if it does not already exist.  The template file should be created in the templates
+directory of your LinkX installation and will need to have 666 permissions.
+
+<br />
+<br />
+
+<b class="heading">Category Status<a name="status"></a></b>
+
+<br />
+<br />
+
+Each of your categories can have it's own status setting which controls how new link submission are handled.  Each of the available options are described below.
+
+<ul>
+<table cellspacing="1" cellpadding="4" class="fields">
+<tr>
+<td valign="top" align="right">
+<b>Automatically accept new links</b>
+</td>
+<td>
+All new link submissions will be automatically approved without being reviewed by an administrator
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Require approval of new links</b>
+</td>
+<td>
+All new link submissions must be approved by an administrator before they will appear in the link directory
+</td>
+</tr>
+<tr>
+<td valign="top" align="right">
+<b>Locked - Do not accept new links</b>
+</td>
+<td>
+No new link submissions will be allowed in this category
+</td>
+</tr>
+</table>
+</ul>
+
+The category status can be changed at any time depending on your needs, so if you temporarily need to stop new link submissions in a certain category you can
+set it to Locked status and then change it back to one of the others when you are ready to begin accepting links in that category again.
+
+<br />
+<br />
+
+<b class="heading">Editing a Category<a name="edit"></a></b>
+
+<br />
+<br />
+
+To edit a category you will fist need to locate it through the <a href="directory-browse.html">Directory Browsing</a> or <a href="category-search.html">Category Search</a> interfaces.
+When you locate the category you want to edit, click on the <img src="../images/edit.png"> icon to bring up the category editing interface.  This interface is nearly identical to the
+category creation interface, and has the same form fields with the same properties.  You can make the changes that you want, and then press the Update Category button to save your changes.
+
+<br />
+<br />
+
+<b class="heading">Deleting a Category<a name="delete"></a></b>
+
+<br />
+<br />
+
+<div class="note">
+Deleting a category will also delete all of it's links, sub-categories, and the links in it's sub-categories.
+</div>
+
+<br />
+
+To delete a category you will fist need to locate it through the <a href="directory-browse.html">Directory Browsing</a> or <a href="category-search.html">Category Search</a> interfaces.
+When you locate the category you want to delete, click on the <img src="../images/trash.png"> icon, which will ask you to confirm the deletion. 
+
+</div>
+</div>
+
+<div style="height: 1200px">
+</div>
+
+</body>
+</html>

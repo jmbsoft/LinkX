@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>LinkX Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div align="center">
+<span class="large">Date and Time Formats</span>
+</div>
+
+<br />
+
+<div class="centered">
+<div class="main-content">
+
+<b class="heading">Introduction</b>
+
+<br />
+<br />
+
+LinkX allows you to set the format that you want dates and times displayed in.  Many countries use differing formats to display
+their dates and times, so this feature will allow you to have your dates and times in a format that the majority of your visitors
+will understand.  The date and time format system used by LinkX is based on the date and time format feature of PHP.  If you have
+experience working with PHP date and time formats, you'll have no problem with these.  Even if you don't, these formats are very
+straightforward and easy to understand.
+
+<br />
+<br />
+
+<b class="heading">Changing Formats</b>
+
+<br />
+<br />
+
+The date and time formats you want to use are configured through the LinkX General Settings interface.  In the control panel, select
+the General Settings option from the Settings menu.  The General Settings pop window will display,  and in the Basic Settings section you will
+find the Date Format and Time Format fields. This is where you will make the changes to your date and time formats.  Once you have made the
+changes you want, press the Save Options button to save your new settings.
+
+<br />
+<br />
+
+Date and time format specifiers consist of a series of characters.  You can find a complete list of these characters below for both dates and
+times.  Using a combination of these specifiers you can create complete date and time formats.  Note that LinkX will only pay attention to
+the defined characters; all other characters in your date or time format will be left alone.  This allows you to use separators such as forward-slashes,
+dashes, and colons as you like.
+
+
+<br />
+<br />
+
+<b class="heading">Date Formats</b>
+
+<pre>
+d - day of the month, 2 digits with leading zeros; i.e. "01" to "31"
+j - day of the month without leading zeros; i.e. "1" to "31"
+D - day of the week, textual, 3 letters; i.e. "Fri"
+l - day of the week, textual, long; i.e. "Friday"
+M - month, textual, 3 letters; i.e. "Jan"
+F - month, textual, long; i.e. "January"
+m - month, 2 digits with leading zeros; i.e. "01" to "12"
+n - month without leading zeros; i.e. "1" to "12"
+Y - year, 4 digits; i.e. "1999"
+y - year, 2 digits; i.e. "99"
+</pre>
+
+<b class="heading">Time Formats</b>
+
+<pre>
+a - "am" or "pm"
+A - "AM" or "PM"
+h - hour, 12-hour format; i.e. "01" to "12"
+H - hour, 24-hour format; i.e. "00" to "23"
+g - hour, 12-hour format without leading zeros; i.e. "1" to "12"
+G - hour, 24-hour format without leading zeros; i.e. "0" to "23"
+i - minutes; i.e. "00" to "59"
+s - seconds; i.e. "00" to "59"
+</pre>
+
+
+</div>
+</div>
+
+</body>
+</html>

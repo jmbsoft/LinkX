@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>LinkX Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div align="center">
+<span class="large">Patching Your LinkX Installation</span>
+</div>
+
+<br />
+
+<div class="centered">
+<div class="main-content">
+
+<b class="heading">Introduction</b>
+
+<br />
+<br />
+
+We will be updating LinkX when necessary to fix any bugs and add small features.  These releases can be recognized by a change 
+in the third digit of the software version number.  For example a change from version 1.0.1 to 1.0.2 is a patch release.  When these patches
+are released you should upgrade your installation with the new version.  This document contains instructions for doing just that.
+
+<br />
+<br />
+
+<b class="heading">Patching</b>
+
+<br />
+<br />
+
+Patching your installation is very simple.  All you need to do is upload the new files from the new version to your server.  All of the files that 
+need to be uploaded are listed below. You should not run any upgrade scripts when patching your installation, those are only used when upgrading
+from a previous major release.
+
+<br />
+
+<ul>
+base directory - all .php files<br />
+admin directory - all files <b>except install.php</b><br />
+admin/docs directory - all files<br />
+admin/images directory - all files<br />
+admin/includes directory - all files<br />
+includes directory - all files <b>except config.php</b><br />
+templates directory - all files starting with rss- <b>only when upgrading from 1.0.x to 1.1.x for the first time</b>
+</ul>
+
+<br />
+
+<div class="note">
+The common.php and template.class.php scripts located in the includes directory of the TGPX distribution must be uploaded to your server in
+binary mode and <b>not ASCII mode</b>.  All of the other .php files can be uploaded in either binary or ASCII mode.
+</div>
+
+<br />
+
+Once those files have been transferred, point your browser to the patch.php script in the admin directory of your LinkX installation.  Accessing this
+script through your browser will perform any updates to the MySQL database that are needed.  Once you access the patch.php script and get a message indicating that the software 
+has been patched successfully, login to the LinkX control panel.
+
+<br />
+<br />
+
+In the LinkX control panel, access the General Settings interface.  Depending on what features were added, there
+may be some new settings for you configure.  Even if there are not any new settings, you will need to press the Save Settings button which will force the
+software to re-scan your server configuration and check all of your settings.  
+
+<br />
+<br />
+
+The final step in the control panel is to run the Recompile Templates and Clear Template Cache functions in the control panel.  
+These are internal software functions that will update your directory page templates with any fixes or tweaks that have been made to the template system.
+
+<br />
+<br />
+
+The software has now been updated and you can continue using it as you regularly would!
+
+<br />
+<br />
+
+<b class="heading">Important Notes</b>
+
+<br />
+<br />
+
+It is not necessary to delete any files from your server before you upload the updated scripts. If you do delete any files, make sure you
+reset all permissions on the files you upload.  All file permissions are covered in the <a href="installation.html">Installation</a>
+section of the manual.
+
+</div>
+</div>
+
+<br />
+<br />
+
+</body>
+</html>

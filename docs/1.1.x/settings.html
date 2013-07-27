@@ -1,0 +1,196 @@
+<html>
+<head>
+    <title>LinkX Documentation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div align="center">
+<span class="large">General Settings</span>
+</div>
+
+<br />
+
+<div class="centered">
+<div class="main-content">
+
+<b class="heading">Introduction</b>
+
+<br />
+<br />
+
+The General Settings interface allows you to configure the software options as you like.  There are a number of settings that you can adjust, and each of them 
+is described in this section of the manual.
+
+<br />
+<br />
+
+<b class="heading">Basic Settings</b>
+
+<ul>
+<b>Base URL</b> - This is the URL that points to the directory where LinkX is installed.  If you install LinkX in the base directory of your
+site this would be http://www.yoursite.com
+
+<b>Cookie Domain</b> - This is the domain name of the site where LinkX is installed, for use in setting cookies<br /><br />
+
+
+<b>E-mail Address</b> - This is the e-mail address that will appear in the From field of all e-mails sent by LinkX<br /><br />
+
+<b>E-mail Name</b> - This is the name that will appear in the From field of all e-mails sent by LinkX<br /><br />
+
+<b>E-mail Sender</b> - Choose the method that LinkX will use for sending emails.  In most cases you should leave this set to the default PHP mail() Function
+option.
+
+<br />
+<br />
+
+<ul>
+<b>PHP mail() Function</b> - LinkX will use PHP's built in mail() function for sending e-mail messages.<br />
+<b>Sendmail</b> - LinkX will use sendmail on your server to send e-mail messages.  This will require that PHP is not running
+in safe mode and the popen() function is not disabled.  You will need to enter the full path to sendmail in the text input box
+after the drop down selection field.<br />
+<b>SMTP Server</b> - LinkX will use a SMTP server to send e-mail messages.  This will require that the SMTP server has authorized your
+server to send e-mail messages through it.  You will need to enter the hostname of the SMTP server in the input box after the drop
+down selection field.
+</ul>
+
+<br />
+<br />
+
+<b>New Links Page</b> - The name you want to use for the page that will display the newest links.  If you are using mod_rewrite to create
+search engine friendly URLs, this page name will appear directly in the URL.  If you are not using mod_rewrite, this page name will appear
+in the index.php query string.<br /><br />
+
+<b>Popular Links Page</b> - The name you want to use for the page that will display the most clicked links.  If you are using mod_rewrite to create
+search engine friendly URLs, this page name will appear directly in the URL.  If you are not using mod_rewrite, this page name will appear
+in the index.php query string.<br /><br />
+
+<b>Top Links Page</b> - The name you want to use for the page that will display the top rated links.  If you are using mod_rewrite to create
+search engine friendly URLs, this page name will appear directly in the URL.  If you are not using mod_rewrite, this page name will appear
+in the index.php query string.<br /><br />
+
+<b>Link Details Page</b> - The name you want to use for the page that will display the link details.  You must place a %d somewhere in this page name, which will
+be replaced by the link ID number dynamically by LinkX. This value is only used when you have mod_rewrite enabled for search engine friendly URLs<br /><br />
+
+<b>File Extension</b> - The file extension to use for link pages. This value is only used when you have mod_rewrite enabled for search engine friendly URLs<br /><br />
+
+<b>Date Format</b> - The string that specifies the <a href="date-time-formats.html">format</a> to use for date values<br /><br />
+
+<b>Time Format</b> - The string that specifies the <a href="date-time-formats.html">format</a> to use for date values<br /><br />
+
+<b>Timezone</b> - Select the timezone you are located in so that dates and times can be calculated properly<br /><br />
+
+<b>Decimal Point</b> - The value to use for the decimal point in numbers<br /><br />
+
+<b>Thousands Separator</b> - The value to use for the thousands separator in numbers<br /><br />
+
+<b>Use mod_rewrite to create search engine friendly URLs</b> - If your server has the mod_rewrite Apache module enabled, you can check this box if you
+want search engine friendly URLs to be used.<br /><br />
+
+
+<b>Using custom templates for category pages</b> - Check this box if you have configured a custom template name for any of your categories.  Using custom
+category templates will require additional database queries, so this is only recommended if you absolutely need it and cannot create a custom template
+using the already available template commands.
+
+</ul>
+
+<b class="heading">Link Submission Settings</b>
+
+<ul>
+<b>Description Length</b> - The minimum and maximum number of characters allowed in a link description<br /><br />
+<b>Title Length</b> - The minimum and maximum number of characters allowed in a link title<br /><br />
+<b>Keywords Allowed</b> - The maximum number of keywods that can be submitted with a link<br /><br />
+<b>Default Link Weight</b> - The default link weight value assigned to newly added links<br /><br />
+<b>Allow URL redirection</b> - Check this to allow links to be submitted that redirect to other URLs<br /><br />
+<b>Require a reciprocal link</b> - Check this to require that submitted links contain a reciprocal link to your site<br /><br />
+<b>Only registered users can submit links</b> - Check this to only allow registered users to submit links<br /><br />
+<b>Send confirmation e-mail message to new lnks</b> - Check this to send a confirmation e-mail to the submitter of a new link<br /><br />
+<b>New links must be confirmed through e-mail before activation</b> - Check this to require that new link submissions be confirmed through the e-mail address of the submitter<br /><br />
+<b>Edited links must be approved by an administrator before activation</b> - Check this to require that all user link modifications be approved by an administrator before appearing in the link directory
+</ul>
+
+<b class="heading">Comment Settings</b>
+
+<ul>
+<b>Comment Length</b> - The minimum and maximum number of characters allowed in a comment<br /><br />
+<b>Comment Delay</b> - The amount of time, in seconds, that a user must wait before submitting another comment for the same link<br /><br />
+<b>Only registered users can leave comments for links</b> - Check this to only allow registered users to submit comments<br /><br />
+<b>New comments must be approved by an administrator before display</b> - Check this to require that new comments be approved by an administrator before they appear
+</ul>
+
+<b class="heading">Rating Settings</b>
+
+<ul>
+<b>Maximum Rating</b> - The maximum (best) rating that a link can receive.  5 is the recommended value because LinkX ships with icons that are setup for 
+a rating range from 1 to 5 stars.<br /><br />
+<b>Only registered users can rate links</b> - Check this to only allow registered users to submit ratings<br /><br />
+</ul>
+
+<b class="heading">Account Settings</b>
+
+<ul>
+<b>Send confirmation e-mail message to new accounts</b> - Check this to have LinkX send a confirmation e-mail message to all newly created accounts<br /><br />
+<b>New accounts must be confirmed through e-mail before activation</b> - Check this to require that new link accounts be confirmed through the e-mail address of the submitter<br /><br />
+<b>New accounts must be approved by an administrator before activation</b> - Check this to require that all new user accounts be approved by an administrator before becoming active
+</ul>
+
+<b class="heading">dsbl.org Blacklist Settings</b>
+
+<br />
+<br />
+
+dsbl.org (Distributed Sender Blackhole List) provides a service where you can find if certain IP addresses have been blocked because they are known to be
+on open proxy, e-mail relay, or other compromised computer.  Many times these IP addresses represent computers that have been hacked and are being controlled
+by spammers to allow them to make HTTP requests from many different IP addresses.  Enabling any of these options will cause LinkX to check against the dsbl.org
+list when the specified action is taking place, and will block the user from completing that action if their IP address is on the list.
+
+<ul>
+<b>Check dsbl.org for banned IP addresses during link submission</b><br />
+<b>Check dsbl.org for banned IP addresses during link rating</b><br />
+<b>Check dsbl.org for banned IP addresses during link comment submission</b><br />
+<b>Check dsbl.org for banned IP addresses during account creation</b><br />
+<b>Check dsbl.org for banned IP addresses during bad link reporting</b><br />
+</ul>
+
+<b class="heading">Verification Code Settings</b>
+
+<br />
+<br />
+
+Please also review the <a href="verification-codes.html">Verification Codes</a> section of this manual
+
+<ul>
+<b>Font Directory</b> - The full directory path to the location of the LinkX fonts directory.<br /><br />
+<b>Code Length</b> - The minimum and maximum number of characters that will appear in a verification code.<br /><br />
+<b>Use words file for verification codes</b> - Check this box to use the values stored in the words file for the verification codes.<br /><br />
+<b>Require verification code on link submission form</b> - Check this box to require a verification code during link submission.<br /><br />
+<b>Require verification code on account signup form</b> - Check this box to require a verification code during account signup.<br /><br />
+<b>Require verification code to rate links</b> - Check this box to require a verification code during link rating.<br /><br />
+<b>Require verification code to leave comments</b> - Check this box to require a verification code during comment submission.
+</ul>
+
+<b class="heading">Cache Settings</b>
+
+<br />
+<br />
+
+Please also review the <a href="cache.html">Cache System</a> section of this manual
+
+<ul>
+<b>Index Page</b> - The time, in seconds, between cache updates of the main link directory page.<br /><br />
+<b>Category Page</b> - The time, in seconds, between cache updates of the link category pages.<br /><br />
+<b>New Links Page</b> - The time, in seconds, between cache updates of the new links page.<br /><br />
+<b>Popular Links Page</b> - The time, in seconds, between cache updates of the most clicked links page.<br /><br />
+<b>Top Links Page</b> - The time, in seconds, between cache updates of the top rated links page.<br /><br />
+<b>Search Page</b> - The time, in seconds, between cache updates of the link search page.<br /><br />
+<b>Details Page</b> - The time, in seconds, between cache updates of the link details page.
+</ul>
+
+</div>
+</div>
+
+<br />
+<br />
+
+</body>
+</html>
