@@ -9,9 +9,6 @@
 <div id="footer">
 <div id="footer-text">
 &copy; {$t_timestamp|tdate('Y')} {$config.domain|htmlspecialchars}<br />
-%%Powered_By%%
-<!-- Removing or hiding the powered by LinkX portion of the template
-is strictly forbidden unless you have purchased the link removal license -->
 </div>
 </div>
 
